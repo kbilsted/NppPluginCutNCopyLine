@@ -46,6 +46,7 @@
     <Compile Include="PluginInfrastructure\ClikeStringArray.cs" />
     <Compile Include="PluginInfrastructure\DllExport\DllExportAttribute.cs" />
     <Compile Include="PluginInfrastructure\Win32.cs" />
+    <Compile Include="Main.cs" />
     <Compile Include="PluginInfrastructure\GatewayDomain.cs" />
     <Compile Include="PluginInfrastructure\ScintillaGateway.cs" />
     <Compile Include="PluginInfrastructure\IScintillaGateway.cs" />
