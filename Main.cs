@@ -33,7 +33,7 @@ namespace Kbg.NppPluginNET
 			if (scintilla.GetSelectionLength() != 0)
 				scintilla.Copy();
 			else
-				scintilla.LineCopy();
+				scintilla.CopyAllowLine();
 		}
 
 		private static void CutSelectionOrLine()
@@ -42,12 +42,15 @@ namespace Kbg.NppPluginNET
 			if (scintilla.GetSelectionLength() != 0)
 				scintilla.Cut();
 			else
-				scintilla.LineCut();
+			{
+				scintilla.CopyAllowLine();
+				scintilla.LineDelete();
+			}
 		}
 
 		private static void ShowAbout()
 		{
-			var message = @"Version: 1.00
+			var message = @"Version: 1.01
 
 This plugin changes how ctrl+c and ctrl+x work. 
 If no selection is made, the commands operate on the current line.
